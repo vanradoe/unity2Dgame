@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 210268147179876804}
   - component: {fileID: 6235248573924410647}
   - component: {fileID: 7137089911650913216}
+  - component: {fileID: 8869836262164553640}
   m_Layer: 0
   m_Name: Spike
   m_TagString: Untagged
@@ -142,3 +143,15 @@ PolygonCollider2D:
       - {x: -0.5, y: -0.28866667}
       - {x: 0.5, y: -0.28866667}
   m_UseDelaunayMesh: 1
+--- !u!114 &8869836262164553640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8715665234103721433}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fe3feeb37aaf4a229ab4f4f61af9c6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Spike

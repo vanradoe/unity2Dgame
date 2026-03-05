@@ -10,12 +10,12 @@ public class Spike : MonoBehaviour
     }
 
     // Update is called once per frame
-    void OnCollisionEnter(Collision collision)
+    void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            gm.changehealth(-3);
-            Debug.Log("health -3");
+            gm.changehealth(-1);
+            Debug.Log("health -1");
         }
     }
 }

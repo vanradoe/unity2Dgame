@@ -9,12 +9,13 @@ public class Coin : MonoBehaviour
     }
 
     // Update is called once per frame
-    void OnTriggerEnter(Collider collision)
+    void OnTriggerEnter2D(Collider2D collision)
     {
        if (collision.gameObject.CompareTag("Player"))
         {
             gm.changecoins(1);
-            Debug.Log("coin = 1");
+            Destroy(gameObject);
+
         }
     }
 }

@@ -102,6 +102,15 @@ public partial class @Input: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": true
                 },
                 {
+                    ""name"": ""Move WASD1"",
+                    ""type"": ""Value"",
+                    ""id"": ""c28a5937-c0d0-4438-8414-54e8ce382487"",
+                    ""expectedControlType"": ""Axis"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
                     ""name"": ""Move ARROWS"",
                     ""type"": ""Value"",
                     ""id"": ""278635d4-b4b8-4809-927e-d680b01ba057"",
@@ -160,6 +169,39 @@ public partial class @Input: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Move WASD"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""1D Axis"",
+                    ""id"": ""d66ee564-37e0-4726-88c3-2c0bfee1c4de"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move WASD1"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""negative"",
+                    ""id"": ""a1f7ac1f-cd8e-4315-af2b-6b3a44d4a48d"",
+                    ""path"": ""<Keyboard>/s"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move WASD1"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""54247306-19bb-4ef6-8533-9278d5354562"",
+                    ""path"": ""<Keyboard>/w"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move WASD1"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -238,6 +280,7 @@ public partial class @Input: IInputActionCollection2, IDisposable
         // Player
         m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
         m_Player_MoveWASD = m_Player.FindAction("Move WASD", throwIfNotFound: true);
+        m_Player_MoveWASD1 = m_Player.FindAction("Move WASD1", throwIfNotFound: true);
         m_Player_MoveARROWS = m_Player.FindAction("Move ARROWS", throwIfNotFound: true);
         m_Player_Jump = m_Player.FindAction("Jump", throwIfNotFound: true);
         m_Player_Interact = m_Player.FindAction("Interact", throwIfNotFound: true);
@@ -322,6 +365,7 @@ public partial class @Input: IInputActionCollection2, IDisposable
     private readonly InputActionMap m_Player;
     private List<IPlayerActions> m_PlayerActionsCallbackInterfaces = new List<IPlayerActions>();
     private readonly InputAction m_Player_MoveWASD;
+    private readonly InputAction m_Player_MoveWASD1;
     private readonly InputAction m_Player_MoveARROWS;
     private readonly InputAction m_Player_Jump;
     private readonly InputAction m_Player_Interact;
@@ -340,6 +384,10 @@ public partial class @Input: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "Player/MoveWASD".
         /// </summary>
         public InputAction @MoveWASD => m_Wrapper.m_Player_MoveWASD;
+        /// <summary>
+        /// Provides access to the underlying input action "Player/MoveWASD1".
+        /// </summary>
+        public InputAction @MoveWASD1 => m_Wrapper.m_Player_MoveWASD1;
         /// <summary>
         /// Provides access to the underlying input action "Player/MoveARROWS".
         /// </summary>
@@ -381,6 +429,9 @@ public partial class @Input: IInputActionCollection2, IDisposable
             @MoveWASD.started += instance.OnMoveWASD;
             @MoveWASD.performed += instance.OnMoveWASD;
             @MoveWASD.canceled += instance.OnMoveWASD;
+            @MoveWASD1.started += instance.OnMoveWASD1;
+            @MoveWASD1.performed += instance.OnMoveWASD1;
+            @MoveWASD1.canceled += instance.OnMoveWASD1;
             @MoveARROWS.started += instance.OnMoveARROWS;
             @MoveARROWS.performed += instance.OnMoveARROWS;
             @MoveARROWS.canceled += instance.OnMoveARROWS;
@@ -404,6 +455,9 @@ public partial class @Input: IInputActionCollection2, IDisposable
             @MoveWASD.started -= instance.OnMoveWASD;
             @MoveWASD.performed -= instance.OnMoveWASD;
             @MoveWASD.canceled -= instance.OnMoveWASD;
+            @MoveWASD1.started -= instance.OnMoveWASD1;
+            @MoveWASD1.performed -= instance.OnMoveWASD1;
+            @MoveWASD1.canceled -= instance.OnMoveWASD1;
             @MoveARROWS.started -= instance.OnMoveARROWS;
             @MoveARROWS.performed -= instance.OnMoveARROWS;
             @MoveARROWS.canceled -= instance.OnMoveARROWS;
@@ -473,6 +527,13 @@ public partial class @Input: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnMoveWASD(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Move WASD1" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnMoveWASD1(InputAction.CallbackContext context);
         /// <summary>
         /// Method invoked when associated input action "Move ARROWS" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
         /// </summary>

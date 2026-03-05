@@ -16,6 +16,15 @@
                     "initialStateCheck": true
                 },
                 {
+                    "name": "Move WASD1",
+                    "type": "Value",
+                    "id": "c28a5937-c0d0-4438-8414-54e8ce382487",
+                    "expectedControlType": "Axis",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
                     "name": "Move ARROWS",
                     "type": "Value",
                     "id": "278635d4-b4b8-4809-927e-d680b01ba057",
@@ -74,6 +83,39 @@
                     "processors": "",
                     "groups": "",
                     "action": "Move WASD",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "1D Axis",
+                    "id": "d66ee564-37e0-4726-88c3-2c0bfee1c4de",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move WASD1",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "a1f7ac1f-cd8e-4315-af2b-6b3a44d4a48d",
+                    "path": "<Keyboard>/s",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move WASD1",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "54247306-19bb-4ef6-8533-9278d5354562",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move WASD1",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },

@@ -1421,7 +1421,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7954688481805356006, guid: 92ce296a7fdf44998a8c79621362746d, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.93671745
+      value: 0.97493494
       objectReference: {fileID: 0}
     - target: {fileID: 7954688481805356006, guid: 92ce296a7fdf44998a8c79621362746d, type: 3}
       propertyPath: m_LocalScale.y
@@ -1429,7 +1429,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7954688481805356006, guid: 92ce296a7fdf44998a8c79621362746d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.556
+      value: 0.5751
       objectReference: {fileID: 0}
     - target: {fileID: 7954688481805356006, guid: 92ce296a7fdf44998a8c79621362746d, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3316,8 +3316,6 @@ MonoBehaviour:
   healthText: {fileID: 1811230966}
   coinsText: {fileID: 477167247}
   EnemyText: {fileID: 0}
-  level_coins: 0
-  level_index: 0
 --- !u!4 &1604462282
 Transform:
   m_ObjectHideFlags: 0
@@ -3620,19 +3618,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7954688481805356006, guid: 92ce296a7fdf44998a8c79621362746d, type: 3}
       propertyPath: m_LocalScale.x
-      value: 2.91542
+      value: 2.9535205
       objectReference: {fileID: 0}
     - target: {fileID: 7954688481805356006, guid: 92ce296a7fdf44998a8c79621362746d, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.94541466
+      value: 1.0013925
       objectReference: {fileID: 0}
     - target: {fileID: 7954688481805356006, guid: 92ce296a7fdf44998a8c79621362746d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.4356
+      value: -0.4165
       objectReference: {fileID: 0}
     - target: {fileID: 7954688481805356006, guid: 92ce296a7fdf44998a8c79621362746d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.482
+      value: -0.51
       objectReference: {fileID: 0}
     - target: {fileID: 7954688481805356006, guid: 92ce296a7fdf44998a8c79621362746d, type: 3}
       propertyPath: m_LocalPosition.z

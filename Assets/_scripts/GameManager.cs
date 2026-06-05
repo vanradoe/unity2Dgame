@@ -7,6 +7,9 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI healthText;
     public TextMeshProUGUI coinsText;   
     public TextMeshProUGUI EnemyText;
+    public int level_coins = 0;
+
+    public int level_index = 0;
 
     private int health;
     private int coins;
@@ -26,6 +29,10 @@ public class GameManager : MonoBehaviour
     {
         coins += amount;
         coinsText.text = "Coins: " + coins;
+            if (coins >= level_coins)
+            {
+                NextLevel();
+            }
     }
 
     public void changeenemies(int amount)
@@ -37,6 +44,7 @@ public class GameManager : MonoBehaviour
   
     void Start()
     {
+        print(SceneManager.sceneCountInBuildSettings);
         coinsText.text = "Coins: " + coins;
         healthText.text = "Health: " + health;
         EnemyText.text = "Enemies: " + enemies;
@@ -50,5 +58,16 @@ public class GameManager : MonoBehaviour
     void RestartGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    void NextLevel()
+    {
+        level_index += 1;
+        //if (level_index >=  SceneManager.sceneCountInBuildSettings)
+        //{
+        //    level_index = 0;
+        //}
+        //print(SceneManager.sceneCountInBuildSettings); 
+        SceneManager.LoadScene(level_index);
     }
 }
